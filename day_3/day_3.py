@@ -50,6 +50,7 @@ for index in range(len(diagnostic_report[0])):
 
 for index in range(len(diagnostic_report[0])):
     more_common = most_common(co2_scrubber_rating, index)
+    # only keep least common
     co2_scrubber_rating = [rating for rating in co2_scrubber_rating if rating[index] != more_common]
     if len(co2_scrubber_rating) == 1: break
 
